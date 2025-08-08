@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>curd</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <h2 class="text-center bg-info mt-3">Card Form</h2>
+      <br />
+
+      <div class="row">
+        <div class="col-md-3 mb-6">
+          <div class="card shadow-lg">
+            <img src="image/doremon.jpg" alt="" class="w-100" />
+            <div class="card-body">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Pariatur vero consequuntur.
+              </p>
+              <button class="btn btn-info">Read More..</button>
+            </div>
+            <!--card body end-->
+          </div>
+          <!--card end-->
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <div class="card shadow-lg">
+            <h2 class="text-center bg-danger">Register Form</h2>
+            <div class="card-body">
+              <form action="">
+                <div class="mb-3">
+                  <label for="">Name</label>
+                  <input type="text" name="" class="form-control" />
+                </div>
+                <div class="mb-3">
+                  <label for="">Email</label>
+                  <input type="email" name="" class="form-control" />
+                </div>
+                <div class="mb-3">
+                  <label for="">Phone</label>
+                  <input type="number" name="" class="form-control" />
+                </div>
+                <div class="mb-3">
+                  <label for="">D.O.B</label>
+                  <input type="date" name="" class="form-control" />
+                </div>
+                <button class="btn btn-danger">Submit</button>
+              </form>
+            </div>
+            <!--card body end-->
+          </div>
+          <!--card end-->
+        </div>
+
+        <div class="col-md-4 mb-3">
+          <div class="card shadow-lg">
+            <h2 class="text-center bg-info">Login</h2>
+
+            <div class="card-body">
+              <form action="">
+                <div class="mb-3">
+                  <label for="">Username</label>
+                  <input type="text" class="form-control" />
+                </div>
+                <div class="mb-3">
+                  <label for="">Password</label>
+                  <input type="password" name="" class="form-control" />
+                </div>
+              </form>
+              <button class="btn btn-danger">Login</button>
+            </div>
+            <!--card body end-->
+          </div>
+          <!--card end-->
+        </div>
+      </div>
+      <!--row end-->
+    </div>
+    <!--container end-->
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
